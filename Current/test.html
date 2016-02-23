@@ -93,7 +93,11 @@ html.postit{
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
 
 
 
@@ -148,7 +152,7 @@ Maybe it&#39;s a maintenance entrance.
 Moss and [[concrete.-&gt;concrete]]
 
 [[Turn the crank handle.-&gt;doorway]]</tw-passagedata>
-<tw-passagedata pid="8" name="concrete" tags="darkgrey" position="429,468">The soviets used concrete. Kinda ironic.
+<tw-passagedata pid="8" name="concrete" tags="darkgrey" position="429,468">Concrete always seemed like a soviet material.
 
 [[I guess it lasts-&gt;arrival]] </tw-passagedata>
 <tw-passagedata pid="9" name="doorway" tags="lightsoff" position="860,577">
@@ -241,7 +245,7 @@ A no entry sign.
 [[&#39;&#39;COMMAND AND CONTROL&#39;&#39;-&gt;controlroom]]
 //NO UNAUTHORISED ENTRY//
 
-(if: $attack is true)[[[&#39;&#39;LIVING QUARTERS&#39;&#39;-&gt;coridoor]]
+(if: $attack is true)[[[&#39;&#39;SECTORS 1-3&#39;&#39;-&gt;coridoor]]
 [[Check the blast doors again.-&gt;Decontaminate]]]
 </tw-passagedata>
 <tw-passagedata pid="23" name="fan" tags="grey" position="1084,979">(text-style: &quot;fade-in-out&quot;)[A huge recirculation fan.
@@ -257,7 +261,9 @@ The room is dark and sprawling. It looks like the war room from [[Dr Strangelove
 [[What else does this place hide?-&gt;hall]]
 
 </tw-passagedata>
-<tw-passagedata pid="25" name="coridoor" tags="darkgrey" position="588,1315">Flourescent lights dot the coridoor. Glass from smashed tubes glints on the floor. [[It&#39;s a good thing you&#39;re wearing shoes.-&gt;stupid]]</tw-passagedata>
+<tw-passagedata pid="25" name="coridoor" tags="darkgrey" position="686,1299">Flourescent lights dot the coridoor. Glass from smashed tubes glints on the floor. [[It&#39;s a good thing you&#39;re wearing shoes.-&gt;stupid]]
+
+A [[sign-&gt;sign]] on the wall points deeper into the bunker.</tw-passagedata>
 <tw-passagedata pid="26" name="comms room" tags="computer" position="1320,1500">$ (text-style: &quot;fade-in-out&quot;)[ENTER PASSSWORD]
 
 (font:&#39;Montserrat&#39;)[(color: #646166)[Amber monochrome monitors. Easier on the eyes.
@@ -267,7 +273,7 @@ There&#39;s a [[post-it note-&gt;postit]] on the desk.
 (if: $password is true)[[[Enter the password-&gt;pcscreen1]]]]]</tw-passagedata>
 <tw-passagedata pid="27" name="warroom" tags="darkgrey" position="1597,1197">Maybe kubrick came down here?
 [[They won&#39;t pollute your body fluids.-&gt;controlroom]]</tw-passagedata>
-<tw-passagedata pid="28" name="radio" tags="darkgrey" position="1632,744">An antenna cable snakes up the wall. The only way in. No way out.
+<tw-passagedata pid="28" name="radio" tags="darkgrey" position="1632,745">An antenna cable snakes up the wall. The only way in. No way out.
 (if: $radio is true)[One radio crackles to life.
 {&lt;audio autoplay&gt;
   &lt;source src=&quot;sound/radioalert.wav&quot; type=&quot;audio/wav&quot;&gt;
@@ -371,7 +377,7 @@ A no entry sign.
 [[&#39;&#39;COMMAND AND CONTROL&#39;&#39;-&gt;controlroom2]]
 &#39;&#39;NO UNAUTHORISED ENTRY&#39;&#39;
 
-&#39;&#39;LIVING QUARTERS&#39;&#39;
+&#39;&#39;SECTORS 1-3&#39;&#39;
 
 [[Get out.-&gt;Decontaminate2]]
 </tw-passagedata>
@@ -403,13 +409,13 @@ Deep Well Pumping: UP
 
 $ [[EXIT PROGRAM-&gt;comms room2]]]]</tw-passagedata>
 <tw-passagedata pid="50" name="water3" tags="darkgrey" position="1333,1832">A rumble from deep below. The chugging of motors reaches you from far away. Running water will be useful if you [[stay here any longer-&gt;comms room2]] (set: $water to true)</tw-passagedata>
-<tw-passagedata pid="51" name="stupid" tags="darkgrey" position="838,1362">You&#39;d be stupid not to.
+<tw-passagedata pid="51" name="stupid" tags="darkgrey" position="457,1165">You&#39;d be stupid not to.
 [[This place is dangerous.-&gt;coridoor]]</tw-passagedata>
 <tw-passagedata pid="52" name="Decontaminate2" tags="" position="1103,737">&#39;&#39;DECONTAMINATION CHAMBER&#39;&#39;
 Chemicals fill your nose.
 There is a gulley stained blue by a river of disinfectant.
 
-There&#39;s a [[pinboard-&gt;pinboard]] with an important looking letter head.
+There&#39;s a [[pinboard-&gt;pinboard2]] with an important looking letter head.
 [[The blast door is locked. Why? Maybe it wasn&#39;t a Y2k bug.-&gt;locked]]
 </tw-passagedata>
 <tw-passagedata pid="53" name="locked" tags="darkblue" position="1102,601">There&#39;s got to be a [[manual-&gt;locked1]] override</tw-passagedata>
@@ -430,13 +436,13 @@ Of course not, why would you want to escape into [[fallout.-&gt;locked2]]</tw-pa
 [[Why listen to British radio?-&gt;radio2]]</tw-passagedata>
 <tw-passagedata pid="60" name="radio2" tags="darkgrey" position="1913,601">Didn&#39;t submarines check that station in the event of nuclear war?
 [[Silence.-&gt;radio]]</tw-passagedata>
-<tw-passagedata pid="61" name="what" tags="darkgrey" position="1637.0001,619">(set: $radio to false)This can&#39;t be right.
+<tw-passagedata pid="61" name="what" tags="darkgrey" position="1637,619">(set: $radio to false)This can&#39;t be right.
 [[Turn it off and on.-&gt;what2]]</tw-passagedata>
 <tw-passagedata pid="62" name="what2" tags="darkpurple" position="1652,473">Silence.
 (live:2s)[It happened.]
 (live:4s)[You did this.]
 (live:6s)[[[You caused a nuclear attack.-&gt;realisation]]]</tw-passagedata>
-<tw-passagedata pid="63" name="realisation" tags="darkpurple" position="1509.0001,557">People will come.
+<tw-passagedata pid="63" name="realisation" tags="darkpurple" position="1509,557">People will come.
 They will surely come.
 This is a fallout shelter, the whole town will be here [[soon.-&gt;towncoming]]</tw-passagedata>
 <tw-passagedata pid="64" name="towncoming" tags="darkblue" position="1448,432">Everything will be [[okay-&gt;hide]] once the town arrives.</tw-passagedata>
@@ -445,6 +451,147 @@ This is a fallout shelter, the whole town will be here [[soon.-&gt;towncoming]]<
 (click-replace: ?c4)[There&#39;s no use hiding. They can&#39;t get in anyway. The doors are [[locked.-&gt;hide2]]]</tw-passagedata>
 <tw-passagedata pid="66" name="hide2" tags="peach" position="1591,283">At least, one is...
 [[Check the other entrances.-&gt;hall]]</tw-passagedata>
+<tw-passagedata pid="67" name="sign" tags="" position="685,1434">
+//SECTOR 3//
+[[&#39;&#39;CONFERENCE ROOM&#39;&#39;-&gt;conference]]
+
+[[&#39;&#39;ADMINISTRATION&#39;&#39;-&gt;admin]]
+
+[[&#39;&#39;SUPPLIES &amp; KITCHEN&#39;&#39;-&gt;supplies]]
+
+This must be the office area.
+The sign above points to the other sectors.
+
+[[//SECTOR 2//-&gt;sector2]]
+
+[[//SECTOR 1//-&gt;hall]]</tw-passagedata>
+<tw-passagedata pid="68" name="sector2" tags="" position="326,1437">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="69" name="conference" tags="darkgrey" position="354,1583">A [[blackboard.]]
+[[Overhead Projector.-&gt;projector]]
+
+Moth eaten chairs surround the table. 
+[[Never used.-&gt;sign]]</tw-passagedata>
+<tw-passagedata pid="70" name="admin" tags="" position="92,1591">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="71" name="supplies" tags="" position="632,1585">baked beans. carrots. peas. peaches. fruit salad. sandwich meat. beef stew. chilli. tuna. tomato soup. chicken soup. vegetable soup. peanut butter. cheese. strawberry spread. powdered milk. dog food. beef jerky. spaghetti. rice. cornflour. salt. mixed seasoning. pepper. sugar. water. hot chocolate. coffee. oil. sunny D. forks. knives. spoons. plates. cups. grain alcohol. vitamin powder. iron powder. iodine. antibiotics. toothpaste. brushes. mouthwash. floss. asprin. paracetamol. activated carbon. smelling salts. fish oil. antihistamine. rehydration tablets. water filtration tablets. radiation tablets. morphine. syringes. IV packs. bandages. sticking plasters. slings. crutches. wheelchairs. splints. bleach. disinfectant. gas. propane. aluminium foil. clingwrap. tarp. tape. paper. wood. gas masks. oxygen. assault rifles. handguns. ammunition. axes. tear gas. electrical cable. flourescent lights. compressed air. flashlights. compasses. pullovers. t-shirts. pants. underwear. HAZMAT suits. goggles. backpacks. batteries.
+{(mouseover-replace: &quot;baked beans&quot;)[4000 cans]
+(mouseover-replace: &quot;carrots&quot;)[2000 cans]
+(mouseover-replace: &quot;peas&quot;)[2000 cans]
+(mouseover-replace: &quot;peaches&quot;)[1000 cans]
+(mouseover-replace: &quot;fruit salad&quot;)[1000 cans]
+(mouseover-replace: &quot;sandwich meat&quot;)[700 cans]
+(mouseover-replace: &quot;beef stew&quot;)[2000 cans]
+(mouseover-replace: &quot;chilli&quot;)[1500 cans]
+(mouseover-replace: &quot;tuna&quot;)[800 cans]
+(mouseover-replace: &quot;tomato soup&quot;)[4000 cans]
+(mouseover-replace: &quot;chicken soup&quot;)[2000 cans]
+(mouseover-replace: &quot;vegetable soup&quot;)[1000 cans]
+(mouseover-replace: &quot;peanut butter&quot;)[150 jars]
+(mouseover-replace: &quot;cheese&quot;)[200 cans]
+(mouseover-replace: &quot;strawberry spread&quot;)[150 jars]
+(mouseover-replace: &quot;powdered milk&quot;)[800 kg]
+(mouseover-replace: &quot;dog food&quot;)[200 kg]
+(mouseover-replace: &quot;beef jerky&quot;)[80 kg]
+(mouseover-replace: &quot;spaghetti&quot;)[300 kg]
+(mouseover-replace: &quot;rice&quot;)[200 kg]
+(mouseover-replace: &quot;cornflour&quot;)[80 kg]
+(mouseover-replace: &quot;salt&quot;)[1000 kg]
+(mouseover-replace: &quot;mixed seasoning&quot;)[20 kg]
+(mouseover-replace: &quot;pepper&quot;)[20 kg]
+(mouseover-replace: &quot;sugar&quot;)[200 kg]
+(mouseover-replace: &quot;water&quot;)[10000 bottles]
+(mouseover-replace: &quot;hot chocolate&quot;)[200 kg]
+(mouseover-replace: &quot;coffee&quot;)[100 kg]
+(mouseover-replace: &quot;oil&quot;)[1000 l]
+(mouseover-replace: &quot;sunny D&quot;)[200 l]
+(mouseover-replace: &quot;forks&quot;)[300]
+(mouseover-replace: &quot;knives&quot;)[300]
+(mouseover-replace: &quot;spoons&quot;)[300]
+(mouseover-replace: &quot;plates&quot;)[300]
+(mouseover-replace: &quot;cups&quot;)[300]
+(mouseover-replace: &quot;grain alcohol&quot;)[400 l]
+(mouseover-replace: &quot;vitamin powder&quot;)[80 kg]
+(mouseover-replace: &quot;iron powder&quot;)[30 kg]
+(mouseover-replace: &quot;iodine&quot;)[30 l]
+(mouseover-replace: &quot;antibiotics&quot;)[3000 tablets]
+(mouseover-replace: &quot;toothpaste&quot;)[4000 tubes]
+(mouseover-replace: &quot;brushes&quot;)[900]
+(mouseover-replace: &quot;mouthwash&quot;)[250 l]
+(mouseover-replace: &quot;floss&quot;)[2 km]
+(mouseover-replace: &quot;asprin&quot;)[30000 tablets]
+(mouseover-replace: &quot;paracetamol&quot;)[25000 tablets]
+(mouseover-replace: &quot;activated carbon&quot;)[900 tablets]
+(mouseover-replace: &quot;smelling salts&quot;)[9 kg]
+(mouseover-replace: &quot;fish oil&quot;)[10 l]
+(mouseover-replace: &quot;antihistamine&quot;)[9000 tablets]
+(mouseover-replace: &quot;rehydration tablets&quot;)[2000 tablets]
+(mouseover-replace: &quot;water filtration tablets&quot;)[9000 tablets]
+(mouseover-replace: &quot;radiation tablets&quot;)[9000 tablets]
+(mouseover-replace: &quot;morphine&quot;)[10 l]
+(mouseover-replace: &quot;syringes&quot;)[900]
+(mouseover-replace: &quot;IV packs&quot;)[750]
+(mouseover-replace: &quot;bandages&quot;)[6 km]
+(mouseover-replace: &quot;sticking plasters&quot;)[3400]
+(mouseover-replace: &quot;slings&quot;)[20]
+(mouseover-replace: &quot;crutches&quot;)[16]
+(mouseover-replace: &quot;wheelchairs&quot;)[3]
+(mouseover-replace: &quot;splints&quot;)[350]
+(mouseover-replace: &quot;bleach&quot;)[870 l]
+(mouseover-replace: &quot;disinfectant&quot;)[760 l]
+(mouseover-replace: &quot;gas&quot;)[200 jerry cans]
+(mouseover-replace: &quot;propane&quot;)[200 canisters]
+(mouseover-replace: &quot;aluminium foil&quot;)[2 km]
+(mouseover-replace: &quot;clingwrap&quot;)[1 km]
+(mouseover-replace: &quot;tarp&quot;)[4 km]
+(mouseover-replace: &quot;tape&quot;)[2.1 km]
+(mouseover-replace: &quot;paper&quot;)[40000 sheets]
+(mouseover-replace: &quot;wood&quot;)[1000 planks]
+(mouseover-replace: &quot;gas masks&quot;)[400]
+(mouseover-replace: &quot;oxygen&quot;)[300 canisters]
+(mouseover-replace: &quot;assault rifles&quot;)[35]
+(mouseover-replace: &quot;handguns&quot;)[40]
+(mouseover-replace: &quot;ammunition&quot;)[2000 rounds]
+(mouseover-replace: &quot;axes&quot;)[12]
+(mouseover-replace: &quot;tear gas&quot;)[30 cans]
+(mouseover-replace: &quot;electrical cable&quot;)[8 km]
+(mouseover-replace: &quot;flourescent lights&quot;)[100 tubes]
+(mouseover-replace: &quot;compressed air&quot;)[320 cans]
+(mouseover-replace: &quot;flashlights&quot;)[300]
+(mouseover-replace: &quot;compasses&quot;)[150]
+(mouseover-replace: &quot;pullovers&quot;)[900]
+(mouseover-replace: &quot;t-shirts&quot;)[900]
+(mouseover-replace: &quot;pants&quot;)[900]
+(mouseover-replace: &quot;underwear&quot;)[900]
+(mouseover-replace: &quot;HAZMAT suits&quot;)[300]
+(mouseover-replace: &quot;goggles&quot;)[300]
+(mouseover-replace: &quot;backpacks&quot;)[300]
+(mouseover-replace: &quot;batteries&quot;)[10000]}
+A massive warehouse. 
+[[Too many supplies for one person.-&gt;sign]]
+</tw-passagedata>
+<tw-passagedata pid="72" name="blackboard." tags="darkgrey" position="284,1716">They had to keep it low tech down here, chalk is easier to store than whiteboard markers.
+[[Write your name on it.-&gt;writename]]</tw-passagedata>
+<tw-passagedata pid="73" name="projector" tags="darkgrey" position="426,1714">It&#39;s plugged in, there&#39;s something on the glass.
+[[Switch it on.-&gt;projectoron]]</tw-passagedata>
+<tw-passagedata pid="74" name="writename" tags="darkgrey" position="284,1866">Nice.
+
+(live:2s)[No, wait. They&#39;ll see this and know you were down here. That //you// caused this.
+[[Rub it off.-&gt;conference]]]</tw-passagedata>
+<tw-passagedata pid="75" name="projectoron" tags="" position="422,1867">&lt;img src= &quot;images/overhead.png&quot; width=&quot;600&quot;&gt;
+[[Never used.-&gt;conference]] The manual still open.</tw-passagedata>
+<tw-passagedata pid="76" name="Bibliography" tags="" position="1524,18">Overhead Projector: https://archive.org/details/versatilityofove00dean
+
+Radio Sample:
+A Day Called X
+
+Videos:
+Prelinger Archive</tw-passagedata>
+<tw-passagedata pid="77" name="pinboard2" tags="notice" position="1103,862">&#39;&#39;UNTIED STATES GOVERNMENT&#39;&#39;
+
+//NUCLEAR PREPAREDNESS COMMISSION//
+
+This facility has been decomissioned due to a lack of structural integrity and reduced nuclear threat.
+
+[[Decomissioned or forgotten.-&gt;Decontaminate2]]</tw-passagedata>
 </tw-storydata>
 
 

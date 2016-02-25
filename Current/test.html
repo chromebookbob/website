@@ -90,6 +90,10 @@ html.postit{
 
 
 
+@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{50%{transform:translateY(-0.2em)}}@keyframes shudder{50%{transform:translateX(0.2em)}}@keyframes box-flash{0%{background-color:white;color:white}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%, to{transform:translateX(0em)}5%, 25%, 45%{transform:translateX(-1em)}15%, 35%, 55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}
+
+
+
 
 
 
@@ -107,8 +111,9 @@ html.postit{
 
 
 
-</script><tw-passagedata pid="1" name="Home" tags="" position="0,231">
-Bleep
+
+
+</script><tw-passagedata pid="1" name="Home" tags="" position="0,231">Bleep
 Saturday morning.
 
 [[Get up.-&gt;room]]
@@ -245,7 +250,7 @@ A no entry sign.
 [[&#39;&#39;COMMAND AND CONTROL&#39;&#39;-&gt;controlroom]]
 //NO UNAUTHORISED ENTRY//
 
-(if: $attack is true)[[[&#39;&#39;SECTORS 1-3&#39;&#39;-&gt;coridoor]]
+(if: $attack is true)[[[&#39;&#39;SECTORS 1 &amp; 2&#39;&#39;-&gt;coridoor]]
 [[Check the blast doors again.-&gt;Decontaminate]]]
 </tw-passagedata>
 <tw-passagedata pid="23" name="fan" tags="grey" position="1084,979">(text-style: &quot;fade-in-out&quot;)[A huge recirculation fan.
@@ -261,7 +266,7 @@ The room is dark and sprawling. It looks like the war room from [[Dr Strangelove
 [[What else does this place hide?-&gt;hall]]
 
 </tw-passagedata>
-<tw-passagedata pid="25" name="coridoor" tags="darkgrey" position="686,1299">Flourescent lights dot the coridoor. Glass from smashed tubes glints on the floor. [[It&#39;s a good thing you&#39;re wearing shoes.-&gt;stupid]]
+<tw-passagedata pid="25" name="coridoor" tags="darkgrey" position="713,1356">Flourescent lights dot the coridoor. Glass from smashed tubes glints on the floor. [[It&#39;s a good thing you&#39;re wearing shoes.-&gt;stupid]]
 
 A [[sign-&gt;sign]] on the wall points deeper into the bunker.</tw-passagedata>
 <tw-passagedata pid="26" name="comms room" tags="computer" position="1320,1500">$ (text-style: &quot;fade-in-out&quot;)[ENTER PASSSWORD]
@@ -409,7 +414,7 @@ Deep Well Pumping: UP
 
 $ [[EXIT PROGRAM-&gt;comms room2]]]]</tw-passagedata>
 <tw-passagedata pid="50" name="water3" tags="darkgrey" position="1333,1832">A rumble from deep below. The chugging of motors reaches you from far away. Running water will be useful if you [[stay here any longer-&gt;comms room2]] (set: $water to true)</tw-passagedata>
-<tw-passagedata pid="51" name="stupid" tags="darkgrey" position="457,1165">You&#39;d be stupid not to.
+<tw-passagedata pid="51" name="stupid" tags="darkgrey" position="545,1309">You&#39;d be stupid not to.
 [[This place is dangerous.-&gt;coridoor]]</tw-passagedata>
 <tw-passagedata pid="52" name="Decontaminate2" tags="" position="1103,737">&#39;&#39;DECONTAMINATION CHAMBER&#39;&#39;
 Chemicals fill your nose.
@@ -451,8 +456,8 @@ This is a fallout shelter, the whole town will be here [[soon.-&gt;towncoming]]<
 (click-replace: ?c4)[There&#39;s no use hiding. They can&#39;t get in anyway. The doors are [[locked.-&gt;hide2]]]</tw-passagedata>
 <tw-passagedata pid="66" name="hide2" tags="peach" position="1591,283">At least, one is...
 [[Check the other entrances.-&gt;hall]]</tw-passagedata>
-<tw-passagedata pid="67" name="sign" tags="" position="685,1434">
-//SECTOR 3//
+<tw-passagedata pid="67" name="sign" tags="" position="682,1637">
+//SECTOR 2//
 [[&#39;&#39;CONFERENCE ROOM&#39;&#39;-&gt;conference]]
 
 [[&#39;&#39;ADMINISTRATION&#39;&#39;-&gt;admin]]
@@ -462,17 +467,32 @@ This is a fallout shelter, the whole town will be here [[soon.-&gt;towncoming]]<
 This must be the office area.
 The sign above points to the other sectors.
 
-[[//SECTOR 2//-&gt;sector2]]
+[[//SECTOR 1//-&gt;sector1]]
 
-[[//SECTOR 1//-&gt;hall]]</tw-passagedata>
-<tw-passagedata pid="68" name="sector2" tags="" position="326,1437">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="69" name="conference" tags="darkgrey" position="354,1583">A [[blackboard.]]
+[[//SECTOR 3//-&gt;hall]]</tw-passagedata>
+<tw-passagedata pid="68" name="sector1" tags="" position="370,1358">
+//SECTOR 2//
+[[&#39;&#39;CANTEEN&#39;&#39;-&gt;canteen]]
+
+[[&#39;&#39;KITCHEN&#39;&#39;-&gt;kitchen]]
+
+[[&#39;&#39;DORMATORY&#39;&#39;-&gt;dormatory]]
+
+[[&#39;&#39;SCREENING ROOM&#39;&#39;-&gt;cinema]]
+
+[[&#39;&#39;MAIN BLAST DOORS&#39;&#39;-&gt;maindoor]]
+
+How deep do you think this is? How did they build this without us knowing?
+
+[[//SECTOR 3//-&gt;sign]]
+</tw-passagedata>
+<tw-passagedata pid="69" name="conference" tags="darkgrey" position="544,1849">A [[blackboard.]]
 [[Overhead Projector.-&gt;projector]]
 
 Moth eaten chairs surround the table. 
 [[Never used.-&gt;sign]]</tw-passagedata>
-<tw-passagedata pid="70" name="admin" tags="" position="92,1591">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="71" name="supplies" tags="" position="632,1585">baked beans. carrots. peas. peaches. fruit salad. sandwich meat. beef stew. chilli. tuna. tomato soup. chicken soup. vegetable soup. peanut butter. cheese. strawberry spread. powdered milk. dog food. beef jerky. spaghetti. rice. cornflour. salt. mixed seasoning. pepper. sugar. water. hot chocolate. coffee. oil. sunny D. forks. knives. spoons. plates. cups. grain alcohol. vitamin powder. iron powder. iodine. antibiotics. toothpaste. brushes. mouthwash. floss. asprin. paracetamol. activated carbon. smelling salts. fish oil. antihistamine. rehydration tablets. water filtration tablets. radiation tablets. morphine. syringes. IV packs. bandages. sticking plasters. slings. crutches. wheelchairs. splints. bleach. disinfectant. gas. propane. aluminium foil. clingwrap. tarp. tape. paper. wood. gas masks. oxygen. assault rifles. handguns. ammunition. axes. tear gas. electrical cable. flourescent lights. compressed air. flashlights. compasses. pullovers. t-shirts. pants. underwear. HAZMAT suits. goggles. backpacks. batteries.
+<tw-passagedata pid="70" name="admin" tags="" position="841,1927">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="71" name="supplies" tags="" position="1056,1901">baked beans. carrots. peas. peaches. fruit salad. sandwich meat. beef stew. chilli. tuna. tomato soup. chicken soup. vegetable soup. peanut butter. cheese. strawberry spread. powdered milk. dog food. beef jerky. spaghetti. rice. cornflour. salt. mixed seasoning. pepper. sugar. water. hot chocolate. coffee. oil. sunny D. forks. knives. spoons. plates. cups. grain alcohol. vitamin powder. iron powder. iodine. antibiotics. toothpaste. brushes. mouthwash. floss. asprin. paracetamol. activated carbon. smelling salts. fish oil. antihistamine. rehydration tablets. water filtration tablets. radiation tablets. morphine. syringes. IV packs. bandages. sticking plasters. slings. crutches. wheelchairs. splints. bleach. disinfectant. gas. propane. aluminium foil. clingwrap. tarp. tape. paper. wood. gas masks. oxygen. assault rifles. handguns. ammunition. axes. tear gas. electrical cable. flourescent lights. compressed air. flashlights. compasses. pullovers. t-shirts. pants. underwear. HAZMAT suits. goggles. backpacks. batteries.
 {(mouseover-replace: &quot;baked beans&quot;)[4000 cans]
 (mouseover-replace: &quot;carrots&quot;)[2000 cans]
 (mouseover-replace: &quot;peas&quot;)[2000 cans]
@@ -568,15 +588,15 @@ Moth eaten chairs surround the table.
 A massive warehouse. 
 [[Too many supplies for one person.-&gt;sign]]
 </tw-passagedata>
-<tw-passagedata pid="72" name="blackboard." tags="darkgrey" position="284,1716">They had to keep it low tech down here, chalk is easier to store than whiteboard markers.
+<tw-passagedata pid="72" name="blackboard." tags="darkgrey" position="474,1982">They had to keep it low tech down here, chalk is easier to store than whiteboard markers.
 [[Write your name on it.-&gt;writename]]</tw-passagedata>
-<tw-passagedata pid="73" name="projector" tags="darkgrey" position="426,1714">It&#39;s plugged in, there&#39;s something on the glass.
+<tw-passagedata pid="73" name="projector" tags="darkgrey" position="616,1980">It&#39;s plugged in, there&#39;s something on the glass.
 [[Switch it on.-&gt;projectoron]]</tw-passagedata>
-<tw-passagedata pid="74" name="writename" tags="darkgrey" position="284,1866">Nice.
+<tw-passagedata pid="74" name="writename" tags="darkgrey" position="474,2132">Nice.
 
 (live:2s)[No, wait. They&#39;ll see this and know you were down here. That //you// caused this.
 [[Rub it off.-&gt;conference]]]</tw-passagedata>
-<tw-passagedata pid="75" name="projectoron" tags="" position="422,1867">&lt;img src= &quot;images/overhead.png&quot; width=&quot;600&quot;&gt;
+<tw-passagedata pid="75" name="projectoron" tags="" position="612,2133">&lt;img src= &quot;images/overhead.png&quot; width=&quot;600&quot;&gt;
 [[Never used.-&gt;conference]] The manual still open.</tw-passagedata>
 <tw-passagedata pid="76" name="Bibliography" tags="" position="1524,18">Overhead Projector: https://archive.org/details/versatilityofove00dean
 
@@ -592,6 +612,31 @@ Prelinger Archive</tw-passagedata>
 This facility has been decomissioned due to a lack of structural integrity and reduced nuclear threat.
 
 [[Decomissioned or forgotten.-&gt;Decontaminate2]]</tw-passagedata>
+<tw-passagedata pid="78" name="canteen" tags="" position="143,1732">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="79" name="kitchen" tags="" position="35,1586">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="80" name="dormatory" tags="" position="26,1413">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="81" name="cinema" tags="darkgrey" position="420,1208">A dirty screen fills the back wall. These seats look just like the ones in the cinema in town. Maybe they built it for the government?
+
+A film [[projector-&gt;projector2]] sits at the back.
+
+No [[dvd player-&gt;sector1]] here...
+
+</tw-passagedata>
+<tw-passagedata pid="82" name="maindoor" tags="" position="72,1232">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="83" name="projector2" tags="darkgrey" position="423,1070">It takes reels. [Dust covers the lens]&lt;c4|. (click-replace: ?c4)[The lens gleams in the darkness.]
+A [[shelf-&gt;filmshelf]] of film casings props up the projector.
+
+</tw-passagedata>
+<tw-passagedata pid="84" name="filmshelf" tags="" position="423,930">A pile of canisters lies underneath the projector. Their labels are stamped onto the metal.
+[[Duck and Cover-&gt;duckandcover]]
+
+</tw-passagedata>
+<tw-passagedata pid="85" name="duckandcover" tags="" position="212,946">{&lt;video width=&quot;600&quot; autoplay controls&gt;
+  &lt;source src=&quot;https://archive.org/download/DuckandC1951/DuckandC1951_512kb.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;https://archive.org/download/DuckandC1951/DuckandC1951.ogv&quot; type=&quot;video/ogg&quot;&gt;
+The canister is empty.
+&lt;/video&gt;}
+Another [[public information-&gt;filmshelf]] film. You&#39;ve missed the only time this information will ever be useful. The nuclear dawn has already risen.</tw-passagedata>
 </tw-storydata>
 
 

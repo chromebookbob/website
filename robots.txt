@@ -1,4 +1,3 @@
 User-agent: *
-Disallow:
-/Current
-/lightyear
+Disallow: /Current/
+Disallow: /lightyear/

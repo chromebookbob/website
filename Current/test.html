@@ -104,7 +104,11 @@ html.phone{
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
 
 
 
@@ -500,7 +504,7 @@ The sign above points to the other sectors.
 
 [[&#39;&#39;BLAST SHELTER&#39;&#39;-&gt;blastshelter]]
 
-How deep do you think this is? How did they build this without us knowing?
+How deep do you think this is? How did they build this without us knowing?(if: $bomboff is false)[It is so lonely down here.]
 
 [[//SECTOR 3//-&gt;sign]]
 </tw-passagedata>
@@ -649,7 +653,7 @@ No [[dvd player-&gt;sector1]] here...
 <tw-passagedata pid="82" name="maindoor" tags="" position="2236,1737">Monolithic steel. It isn&#39;t like a bank [[vault]] door.
 
 (if: $people is true)[Something like the sound of cogs and machinery is coming from the other side. 
-Maybe it&#39;s [[opening.]]]
+Maybe it&#39;s [[opening.]]](if: $bomboff is false)[Screams and thundering fists. You did this.](if: $bomboff is true)[Silence. The [[fuse box-&gt;fusebox]] sits on the wall.]
 [[There&#39;s no way out this way-&gt;sector1]] </tw-passagedata>
 <tw-passagedata pid="83" name="projector2" tags="darkgrey" position="2636,1600">It takes reels. [Dust covers the lens]&lt;c4|. (click-replace: ?c4)[The lens gleams in the darkness.]
 A [[shelf-&gt;filmshelf]] of film casings props up the projector.
@@ -726,7 +730,15 @@ A timed explosive charge.
 (live: 15s)[[[Plant the charge...-&gt;charge]]
 [[Lie...-&gt;lie]]]</tw-passagedata>
 <tw-passagedata pid="96" name="charge" tags="" position="1643,2434">The explosive charge [is in the fuse-box]&lt;c1|(click-replace: ?c1)[sits on the door. A pull cord snakes down from the device. [[Follow the instructions]] on it.]</tw-passagedata>
-<tw-passagedata pid="97" name="lie" tags="" position="1928,2435">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="97" name="lie" tags="" position="1928,2435">*CLICK*(set: $bomboff to false)(set:$people to false)
+(live:4s)[There&#39;s no way to save everyone...
+
+Blowing up the door would be foolish
+
+//they keep hammering on the door.//
+
+[[You can&#39;t help them.-&gt;sector1]]]
+</tw-passagedata>
 <tw-passagedata pid="98" name="Follow the instructions" tags="notice" position="1491,2417">&#39;&#39;UNTIED STATES GOVERNMENT&#39;&#39;
 
 //ONLY TO BE USED IN EMERGENCY//
@@ -851,6 +863,7 @@ You were too late.]
 <tw-passagedata pid="115" name="comics" tags="" position="2792,545">&lt;img src= &quot;images/comics.png&quot; width=&quot;800&quot;&gt;
 
 From the comic store [[in town.-&gt;roomup]]</tw-passagedata>
+<tw-passagedata pid="116" name="fusebox" tags="" position="2083,1380">Double-click this passage to edit it.</tw-passagedata>
 </tw-storydata>
 
 

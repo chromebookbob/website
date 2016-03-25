@@ -272,10 +272,10 @@ A no entry sign.
 
 [[&#39;&#39;COMMAND AND CONTROL&#39;&#39;-&gt;controlroom]]
 //NO UNAUTHORISED ENTRY//
-
+(if: $radio is false)[
 (if: $attack is true)[[[&#39;&#39;SECTORS 1 &amp; 2&#39;&#39;-&gt;coridoor]]
 [[Check the blast doors again.-&gt;Decontaminate]]]
-</tw-passagedata>
+]</tw-passagedata>
 <tw-passagedata pid="23" name="fan" tags="grey" position="3300,1517">(text-style: &quot;fade-in-out&quot;)[A huge recirculation fan.
 It is mesmerizing, galvanised steel spinning just fast enough to make you dizzy.]
 

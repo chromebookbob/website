@@ -684,9 +684,15 @@ Fawcett Comics- archive.org</tw-passagedata>
 This facility has been decomissioned due to a lack of structural integrity and reduced nuclear threat.
 
 [[Decomissioned or forgotten.-&gt;Decontaminate2]]</tw-passagedata>
-<tw-passagedata pid="78" name="canteen" tags="" position="2356,2264">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="79" name="kitchen" tags="" position="2248,2116">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="80" name="dormatory" tags="" position="2240,1944">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="78" name="canteen" tags="" position="2298,2346">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="79" name="kitchen" tags="" position="2152,2238">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="80" name="dormatory" tags="" position="2240,1944">Beds as far as the eye can see. A whole town sleeping in one room.
+
+One row already made up. Military bunks with wool blankets and inch-thick mattresses. Not comfortable but functional. You&#39;ll take anything in an apocolypse. 
+
+(if: $bomboff is true)[You&#39;ll be here a while, you might as well get some sleep. [[Top-&gt;dream2]] bunk or [[bottom-&gt;dream2]]?]
+
+[[No bunk buddies here.-&gt;sector1]]</tw-passagedata>
 <tw-passagedata pid="81" name="cinema" tags="darkgrey" position="2636,1740">A dirty screen fills the back wall. These seats look just like the ones in the cinema in town. Maybe they built it for the government?
 
 A film [[projector-&gt;projector2]] sits at the back.
@@ -1012,12 +1018,23 @@ You are only accountable to [[yourself-&gt;woods1]]]</tw-passagedata>
 <tw-passagedata pid="137" name="woods6" tags="woods6" position="1010,2192">(text-style: &quot;blur&quot;)[All those people. Reduced to [[grey.-&gt;woods7]]]</tw-passagedata>
 <tw-passagedata pid="138" name="woods7" tags="woods7" position="869,2197">(text-style: &quot;blur&quot;)[Detail is almost imperceptible now. The end is upon [[you.-&gt;woods8]]]</tw-passagedata>
 <tw-passagedata pid="139" name="woods8" tags="woods8" position="869,2347">(live: 4s)[(go-to: &quot;scream&quot;)]</tw-passagedata>
-<tw-passagedata pid="140" name="dream" tags="title" position="2042,759">&lt;img src= &quot;images/dream.gif&quot; width=&quot;700&quot; alt=&quot;DREAMSEQUENCE&quot;&gt;
+<tw-passagedata pid="140" name="dream" tags="title" position="2043,758">&lt;img src= &quot;images/dream.gif&quot; width=&quot;700&quot; alt=&quot;DREAMSEQUENCE&quot;&gt;
 
 [[Wake up-&gt;Home]] 
 &lt;audio autoplay loop&gt;
   &lt;source src=&quot;sound/waves.wav&quot; type=&quot;audio/wav&quot;&gt;
 &lt;/audio&gt;</tw-passagedata>
+<tw-passagedata pid="141" name="dream2" tags="title" position="2062,2047">&lt;img src= &quot;images/dream.gif&quot; width=&quot;700&quot; alt=&quot;DREAMSEQUENCE&quot;&gt;
+
+(live: 3s)[[[Wake up-&gt;wakeup]]]
+&lt;audio autoplay loop&gt;
+  &lt;source src=&quot;sound/waves.wav&quot; type=&quot;audio/wav&quot;&gt;
+&lt;/audio&gt;</tw-passagedata>
+<tw-passagedata pid="142" name="wakeup" tags="" position="2048,1897">Where are you?
+
+(live: 3s)[ It wasn&#39;t a dream. The flourescent tubes buzz above you. Still in the bunker.
+
+[[Get out of bed-&gt;sector1]] ]</tw-passagedata>
 </tw-storydata>
 
 

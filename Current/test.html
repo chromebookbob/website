@@ -20,6 +20,12 @@ html {
 	background-color: #D3CCD6;
 	color: #646166;
 }
+html.flicker{
+	font-family: 'Montserrat';
+	background-color: #D3CCD6;
+	background-image: url('images/flicker.gif');
+	color: #646166;
+}
 html.grey{
 	background-color: #757575;
 	color: #DAE7EB;
@@ -142,7 +148,9 @@ html.woods8{
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -520,7 +528,7 @@ This is a fallout shelter, the whole town will be here [[soon.-&gt;towncoming]]<
 (click-replace: ?c4)[There&#39;s no use hiding. They can&#39;t get in anyway. The doors are [[locked.-&gt;hide2]]]</tw-passagedata>
 <tw-passagedata pid="66" name="hide2" tags="peach" position="3804,812">At least, one is...
 [[Check the other entrances.-&gt;hall]]</tw-passagedata>
-<tw-passagedata pid="67" name="sign" tags="" position="2896,2168">
+<tw-passagedata pid="67" name="sign" tags="" position="2896,2168">(if: $bomboff is false)[(go-to: &quot;bomb-off&quot;)]
 //SECTOR 2//
 [[&#39;&#39;CONFERENCE ROOM&#39;&#39;-&gt;conference]]
 
@@ -1035,6 +1043,9 @@ You are only accountable to [[yourself-&gt;woods1]]]</tw-passagedata>
 (live: 3s)[ It wasn&#39;t a dream. The flourescent tubes buzz above you. Still in the bunker.
 
 [[Get out of bed-&gt;sector1]] ]</tw-passagedata>
+<tw-passagedata pid="143" name="bomb-off" tags="" position="3078,2816">{&lt;audio autoplay&gt;
+  &lt;source src=&quot;sound/bomb.wav&quot; type=&quot;audio/wav&quot;&gt;
+&lt;/audio&gt;}</tw-passagedata>
 </tw-storydata>
 
 

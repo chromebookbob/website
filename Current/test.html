@@ -151,7 +151,11 @@ html.woods8{
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
 
 
 
@@ -315,7 +319,7 @@ You Don&#39;t need to disinfect.
 This facility has been decomissioned due to a lack of structural integrity and reduced nuclear threat.
 
 [[Decomissioned or forgotten.-&gt;Decontaminate]]</tw-passagedata>
-<tw-passagedata pid="22" name="hall" tags="" position="3348,1708">This concrete chamber is sparse, damp.
+<tw-passagedata pid="22" name="hall" tags="" position="3347,1707">This concrete chamber is sparse, damp.
 Oblique [[shadows chase-&gt;fan]] eachother around the walls.
 
 A no entry sign.
@@ -534,36 +538,18 @@ This is a fallout shelter, the whole town will be here [[soon.-&gt;towncoming]]<
 <tw-passagedata pid="66" name="hide2" tags="peach" position="3804,812">At least, one is...
 [[Check the other entrances.-&gt;hall]]</tw-passagedata>
 <tw-passagedata pid="67" name="sign" tags="" position="2896,2168">(if: $bomboff is false)[(go-to: &quot;bomb-off&quot;)]
-//SECTOR 2//
-[[&#39;&#39;CONFERENCE ROOM&#39;&#39;-&gt;conference]]
+You&#39;re in //SECTOR 2//. This must be the administration area. There&#39;s an [[office-&gt;admin]] with a window at the end of the hallway, next to the sign for [[//SECTOR 1//-&gt;sector1]]. The carpet ends abruptly after the [[conference room-&gt;conference]]. The remaining concrete leads to a large doorway labeled [[&#39;&#39;SUPPLIES&#39;&#39;-&gt;supplies]]. There must be a lot of supplies for so many people. What did they stockpile?
 
-[[&#39;&#39;ADMINISTRATION&#39;&#39;-&gt;admin]]
 
-[[&#39;&#39;SUPPLIES &amp; KITCHEN&#39;&#39;-&gt;supplies]]
-
-This must be the office area.
-The sign above points to the other sectors.
-
-[[//SECTOR 1//-&gt;sector1]]
-
-[[//SECTOR 3//-&gt;hall]]</tw-passagedata>
+An arrow on the floor points backward. Above it is yellow text that reads [[//SECTOR 3//-&gt;hall]].</tw-passagedata>
 <tw-passagedata pid="68" name="sector1" tags="" position="2585,1888">
-//SECTOR 1//
-[[&#39;&#39;CANTEEN&#39;&#39;-&gt;canteen]]
+The sign reads //SECTOR 1//. This hallway is smarter, more domestic. To your left the [[canteen-&gt;canteen]] and [[kitchen-&gt;kitchen]] doorways glow. A sign with beds on it stands above a door to your right. It must be the [[dormatory.-&gt;dormatory]]There must be enough beds for the whole town in there. [[&#39;&#39;SCREENING ROOM&#39;&#39;-&gt;cinema]]. Maybe there are movies in there. Relics from the cold war most likely.
 
-[[&#39;&#39;KITCHEN&#39;&#39;-&gt;kitchen]]
-
-[[&#39;&#39;DORMATORY&#39;&#39;-&gt;dormatory]]
-
-[[&#39;&#39;SCREENING ROOM&#39;&#39;-&gt;cinema]]
-
-[[&#39;&#39;MAIN BLAST DOORS&#39;&#39;-&gt;maindoor]]
-
-[[&#39;&#39;BLAST SHELTER&#39;&#39;-&gt;blastshelter]]
+Ahead the archway reads: [[&#39;&#39;MAIN BLAST DOORS&#39;&#39;-&gt;maindoor]]. The steel monolith glints in the distance.(color:red)[ (text-style: &quot;fade-in-out&quot;)[A red light pulses]] above a small reinforced door off to the left it illuminates the sign reading: [[&#39;&#39;BLAST SHELTER&#39;&#39;-&gt;blastshelter]]
 
 How deep do you think this is? How did they build this without us knowing?(if: $bomboff is true)[It is so lonely down here.]
 
-[[//SECTOR 2//-&gt;sign]]
+[[Go back to //SECTOR 2//-&gt;sign]]
 </tw-passagedata>
 <tw-passagedata pid="69" name="conference" tags="darkgrey" position="2760,2380">A [[blackboard.]]
 [[Overhead Projector.-&gt;projector]]
@@ -743,7 +729,7 @@ No [[dvd player-&gt;sector1]] here...
 
 (if: $people is true)[Something like the sound of cogs and machinery is coming from the other side. 
 Maybe it&#39;s [[opening.]]](if: $bomboff is false)[Screams and thundering fists. You did this.](if: $bomboff is true)[Silence. The [[fuse box-&gt;fusebox]] sits on the wall. Open.]
-[[There&#39;s no way out this way-&gt;sector1]] </tw-passagedata>
+[[There&#39;s no way out this way.-&gt;sector1]] </tw-passagedata>
 <tw-passagedata pid="83" name="projector2" tags="darkgrey" position="2636,1600">It takes reels. [Dust covers the lens]&lt;c4|. (click-replace: ?c4)[The lens gleams in the darkness.]
 A [[shelf-&gt;filmshelf]] of film casings props up the projector.
 
@@ -984,7 +970,7 @@ No. You&#39;ll die. You [[know]] what&#39;s out there.</tw-passagedata>
 The canister is empty.
 &lt;/video&gt;}
 Another [[public information-&gt;filmshelf]] film. You learned about radiation at school. You won&#39;t be going back to school any time soon.(if: $people is false)[Everybody would have died from radiation if you had blown up that door...]</tw-passagedata>
-<tw-passagedata pid="119" name="aboutfallout" tags="" position="2422.0001,1226">{&lt;video width=&quot;600&quot; autoplay controls&gt;
+<tw-passagedata pid="119" name="aboutfallout" tags="" position="2422,1226">{&lt;video width=&quot;600&quot; autoplay controls&gt;
   &lt;source src=&quot;https://archive.org/download/AboutFal1963/AboutFal1963_512kb.mp4&quot; type=&quot;video/mp4&quot;&gt;
   &lt;source src=&quot;https://archive.org/download/AboutFal1963/AboutFal1963.ogv&quot; type=&quot;video/ogg&quot;&gt;
 The canister is empty.

@@ -149,7 +149,11 @@ html.woods8{
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
 
 
 
@@ -253,7 +257,7 @@ The hum of air recirculation mixes with the buzz of flourescent lights.
 Some of them are dark.
 
 [[You can see the bottom.-&gt;landing]]</tw-passagedata>
-<tw-passagedata pid="13" name="room" tags="" position="2400,748">A (text-style: &quot;rumble&quot;)[ceiling fan whirs and thuds rhythmically.] You know it well, people often find comfort in the [[irregularities-&gt;you]] of regular life. The wall above your head is spotted with {(set: $s to (either: 1, 2, 3)) (if: $s is 1)[  [[photos.-&gt;pics1]]]
+<tw-passagedata pid="13" name="room" tags="" position="2400,749">A (text-style: &quot;rumble&quot;)[ceiling fan whirs and thuds rhythmically.] You know it well, people often find comfort in the [[irregularities-&gt;you]] of regular life. The wall above your head is spotted with {(set: $s to (either: 1, 2, 3)) (if: $s is 1)[  [[photos.-&gt;pics1]]]
 (if: $s is 2)[  [[photos.-&gt;pics2]]]
 (if: $s is 3)[  [[photos.-&gt;pics3]]]}
 
@@ -292,7 +296,8 @@ That should stop some radiation.
 (set: $attack to false)
 (set: $password to false)
 (set: $water to false)
-(set: $people to true)</tw-passagedata>
+(set: $people to true)
+(set: $cook to false)</tw-passagedata>
 <tw-passagedata pid="20" name="Decontaminate" tags="" position="3076,1704">&#39;&#39;DECONTAMINATION CHAMBER&#39;&#39;
 Chemicals fill your nose.
 There is a gulley stained blue by a river of disinfectant.
@@ -565,8 +570,16 @@ How deep do you think this is? How did they build this without us knowing?(if: $
 
 Moth eaten chairs surround the table. 
 [[Never used.-&gt;sign]]</tw-passagedata>
-<tw-passagedata pid="70" name="admin" tags="" position="3056,2456">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="71" name="supplies" tags="" position="3272,2432">baked beans. carrots. peas. peaches. fruit salad. sandwich meat. beef stew. chilli. tuna. tomato soup. chicken soup. vegetable soup. peanut butter. cheese. strawberry spread. powdered milk. dog food. beef jerky. spaghetti. rice. cornflour. salt. mixed seasoning. pepper. sugar. water. hot chocolate. coffee. oil. sunny D. forks. knives. spoons. plates. cups. grain alcohol. vitamin powder. iron powder. iodine. antibiotics. toothpaste. brushes. mouthwash. floss. asprin. paracetamol. activated carbon. smelling salts. fish oil. antihistamine. rehydration tablets. water filtration tablets. radiation tablets. morphine. syringes. IV packs. bandages. sticking plasters. slings. crutches. wheelchairs. splints. bleach. disinfectant. gas. propane. aluminium foil. clingwrap. tarp. tape. paper. wood. gas masks. oxygen. assault rifles. handguns. ammunition. axes. tear gas. electrical cable. flourescent lights. compressed air. flashlights. compasses. pullovers. t-shirts. pants. underwear. HAZMAT suits. goggles. backpacks. batteries.
+<tw-passagedata pid="70" name="admin" tags="" position="2887,2881">A small room, a desk. A computer terminal sits on it. Disconnected at the wall. A file cabinet labeled //NUCLEAR POLICY// sits in the corner, [closed.]&lt;c1|
+
+You shouldn&#39;t look at the files. They&#39;re classified. [[Turn around-&gt;sign]] 
+(click-replace: ?c1)[open. Hundreds of files sit in the drawer. {(set: $s to (either: 1, 2, 3, 4)) (if: $s is 1)[  [[Pick one.-&gt;file1]]]
+(if: $s is 2)[  [[Pick one.-&gt;file2]]]
+(if: $s is 3)[  [[Pick one.-&gt;file3]]]
+(if: $s is 4)[  [[Pick one.-&gt;file4]]]}
+]
+</tw-passagedata>
+<tw-passagedata pid="71" name="supplies" tags="" position="3272,2434">baked beans. carrots. peas. peaches. fruit salad. sandwich meat. beef stew. chilli. tuna. tomato soup. chicken soup. vegetable soup. peanut butter. cheese. strawberry spread. powdered milk. dog food. beef jerky. spaghetti. rice. cornflour. salt. mixed seasoning. pepper. sugar. water. hot chocolate. coffee. oil. sunny D. forks. knives. spoons. plates. cups. grain alcohol. vitamin powder. iron powder. iodine. antibiotics. toothpaste. brushes. mouthwash. floss. asprin. paracetamol. activated carbon. smelling salts. fish oil. antihistamine. rehydration tablets. water filtration tablets. radiation tablets. morphine. syringes. IV packs. bandages. sticking plasters. slings. crutches. wheelchairs. splints. bleach. disinfectant. gas. propane. aluminium foil. clingwrap. tarp. tape. paper. wood. gas masks. oxygen. assault rifles. handguns. ammunition. axes. tear gas. electrical cable. flourescent lights. compressed air. flashlights. compasses. pullovers. t-shirts. pants. underwear. HAZMAT suits. goggles. backpacks. batteries.
 {(mouseover-replace: &quot;baked beans&quot;)[4000 cans]
 (mouseover-replace: &quot;carrots&quot;)[2000 cans]
 (mouseover-replace: &quot;peas&quot;)[2000 cans]
@@ -660,8 +673,10 @@ Moth eaten chairs surround the table.
 (mouseover-replace: &quot;backpacks&quot;)[300]
 (mouseover-replace: &quot;batteries&quot;)[10000]}
 A massive warehouse. 
+
 [[Too many supplies for one person.-&gt;sign]]
-</tw-passagedata>
+
+(if: $getfood is true)[[[Collect-&gt;collectsupplies]] the ingredients for $foodtype]</tw-passagedata>
 <tw-passagedata pid="72" name="blackboard." tags="darkgrey" position="2688,2512">They had to keep it low tech down here, chalk is easier to store than whiteboard markers.
 [[Write your name on it.-&gt;writename]]</tw-passagedata>
 <tw-passagedata pid="73" name="projector" tags="darkgrey" position="2832,2512">It&#39;s plugged in, there&#39;s something on the glass.
@@ -672,7 +687,7 @@ A massive warehouse.
 [[Rub it off.-&gt;conference]]]</tw-passagedata>
 <tw-passagedata pid="75" name="projectoron" tags="" position="2828,2664">&lt;img src= &quot;images/overhead.png&quot; width=&quot;600&quot;&gt;
 [[Never used.-&gt;conference]] The manual still open.</tw-passagedata>
-<tw-passagedata pid="76" name="Bibliography" tags="" position="3740,548">Overhead Projector: https://archive.org/details/versatilityofove00dean
+<tw-passagedata pid="76" name="Bibliography" tags="" position="3740,547">Overhead Projector: https://archive.org/details/versatilityofove00dean
 
 Radio Sample:
 A Day Called X
@@ -681,7 +696,11 @@ Ringing sample:
 https://archive.org/details/HaveITol1958
 
 Videos:
-Prelinger Archive
+Prelinger Archive- archive.org
+
+Documents:
+
+NSIA, archive.org 
 
 Comics:
 Fawcett Comics- archive.org</tw-passagedata>
@@ -692,8 +711,15 @@ Fawcett Comics- archive.org</tw-passagedata>
 This facility has been decomissioned due to a lack of structural integrity and reduced nuclear threat.
 
 [[Decomissioned or forgotten.-&gt;Decontaminate2]]</tw-passagedata>
-<tw-passagedata pid="78" name="canteen" tags="" position="2298,2346">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="79" name="kitchen" tags="" position="2152,2238">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="78" name="canteen" tags="" position="2298,2346">The same tables from school. The same chairs. Brand new.
+Nothing scraped into the tables. No wobbly chairs. No stress marks from years of kids leaning on them. A polished linoleum floor. No marks. The serving hatch glows, a portal to the [[kitchen]].
+
+(if: $food is true)[Your $foodtype is sitting on the table. [[Eat it.]]]
+
+[[It&#39;s lonely in here. Too silent for a canteen.-&gt;sector1]]</tw-passagedata>
+<tw-passagedata pid="79" name="kitchen" tags="" position="2141,2348">An industrial kitchen. Stainless steel, gas hobs. A wall of [[microwaves-&gt;microwaves]] on one side. A walk in [[refrigerator]] on the other. 
+
+[[Get out.-&gt;sector1]]</tw-passagedata>
 <tw-passagedata pid="80" name="dormatory" tags="" position="2240,1944">Beds as far as the eye can see. A whole town sleeping in one room.
 
 One row already made up. Military bunks with wool blankets and inch-thick mattresses. Not comfortable but functional. You&#39;ll take anything in an apocolypse. 
@@ -717,11 +743,13 @@ Maybe it&#39;s [[opening.]]](if: $bomboff is false)[Screams and thundering fists
 A [[shelf-&gt;filmshelf]] of film casings props up the projector.
 
 </tw-passagedata>
-<tw-passagedata pid="84" name="filmshelf" tags="" position="2636,1460">A pile of canisters lies underneath the projector. Their labels are stamped onto the metal.
+<tw-passagedata pid="84" name="filmshelf" tags="" position="2636,1459">A pile of canisters lies underneath the projector. Their labels are stamped onto the metal.
 [[Duck and Cover-&gt;duckandcover]]
 [[Medical Aspects of Nuclear Radiation-&gt;medicalradiation]]
 [[About Fallout (1963)-&gt;aboutfallout]]
-[[Atomic Alert-&gt;atomicalert]]</tw-passagedata>
+[[Atomic Alert-&gt;atomicalert]]
+
+The projector screen hurts your eyes. [[Go back-&gt;cinema]]</tw-passagedata>
 <tw-passagedata pid="85" name="duckandcover" tags="" position="2428,1476">{&lt;video width=&quot;600&quot; autoplay controls&gt;
   &lt;source src=&quot;https://archive.org/download/DuckandC1951/DuckandC1951_512kb.mp4&quot; type=&quot;video/mp4&quot;&gt;
   &lt;source src=&quot;https://archive.org/download/DuckandC1951/DuckandC1951.ogv&quot; type=&quot;video/ogg&quot;&gt;
@@ -946,20 +974,20 @@ No. You&#39;ll die. You [[know]] what&#39;s out there.</tw-passagedata>
 <tw-passagedata pid="117" name="minuteman" tags="computer" position="4161,2269">$ (live: 0.3)[MINUTEMAN INITIATED]
 (live:0.7s)[(go-to: &quot;reboot&quot;)]</tw-passagedata>
 <tw-passagedata pid="118" name="medicalradiation" tags="" position="2422,1351">{&lt;video width=&quot;600&quot; autoplay controls&gt;
-  &lt;source src=&quot;https://ia600303.us.archive.org/23/items/MedicalA1950/MedicalA1950_512kb.mp4&quot; type=&quot;video/mp4&quot;&gt;
-  &lt;source src=&quot;https://ia600303.us.archive.org/23/items/MedicalA1950/MedicalA1950.ogv&quot; type=&quot;video/ogg&quot;&gt;
+  &lt;source src=&quot;https://archive.org/download/MedicalA1950/MedicalA1950_512kb.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;https://archive.org/download/MedicalA1950/MedicalA1950.ogv&quot; type=&quot;video/ogg&quot;&gt;
 The canister is empty.
 &lt;/video&gt;}
 Another [[public information-&gt;filmshelf]] film. You learned about radiation at school. You won&#39;t be going back to school any time soon.(if: $people is false)[Everybody would have died from radiation if you had blown up that door...]</tw-passagedata>
-<tw-passagedata pid="119" name="aboutfallout" tags="" position="2422,1226">{&lt;video width=&quot;600&quot; autoplay controls&gt;
-  &lt;source src=&quot;https://ia800501.us.archive.org/17/items/AboutFal1963/AboutFal1963_512kb.mp4&quot; type=&quot;video/mp4&quot;&gt;
-  &lt;source src=&quot;https://ia800501.us.archive.org/17/items/AboutFal1963/AboutFal1963.ogv&quot; type=&quot;video/ogg&quot;&gt;
+<tw-passagedata pid="119" name="aboutfallout" tags="" position="2422.0001,1226">{&lt;video width=&quot;600&quot; autoplay controls&gt;
+  &lt;source src=&quot;https://archive.org/download/AboutFal1963/AboutFal1963_512kb.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;https://archive.org/download/AboutFal1963/AboutFal1963.ogv&quot; type=&quot;video/ogg&quot;&gt;
 The canister is empty.
 &lt;/video&gt;}
 They showed this [[film-&gt;filmshelf]] at school. There will be fallout soon.</tw-passagedata>
 <tw-passagedata pid="120" name="atomicalert" tags="" position="2547,1226">{&lt;video width=&quot;600&quot; autoplay controls&gt;
-  &lt;source src=&quot;https://ia600302.us.archive.org/33/items/AtomicAl1951/AtomicAl1951_512kb.mp4&quot; type=&quot;video/mp4&quot;&gt;
-  &lt;source src=&quot;https://ia800302.us.archive.org/33/items/AtomicAl1951/AtomicAl1951.ogv&quot; type=&quot;video/ogg&quot;&gt;
+  &lt;source src=&quot;https://archive.org/download/AtomicAl1951/AtomicAl1951_512kb.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;https://archive.org/download/AtomicAl1951/AtomicAl1951.ogv&quot; type=&quot;video/ogg&quot;&gt;
 The canister is empty.
 &lt;/video&gt;}
 Another [[public information-&gt;filmshelf]] film. There must have been a time when this was compulsary viewing.</tw-passagedata>
@@ -1050,6 +1078,60 @@ They&#39;re gone now.
 That was it.
 Dust.
 [[Get off the floor-&gt;sign]] ]</tw-passagedata>
+<tw-passagedata pid="144" name="Eat it." tags="" position="2298,2495">(set: $food to false)Imagine eating this for the rest of your life. (if: $people is false)[You will.]
+
+[[You feel full.-&gt;canteen]]
+(set: $getfood to false)</tw-passagedata>
+<tw-passagedata pid="145" name="microwaves" tags="" position="2035,2669">Of course, most of the food is vacuum packed. Nasa-style. 
+A [[recipe book]] sits on a counter. (if: $cook is false)[Maybe you should get some food...](if: $cook is true)[Put the $foodtype in the [[microwave.-&gt;cooked]]]
+
+[[No thanks.-&gt;kitchen]]
+</tw-passagedata>
+<tw-passagedata pid="146" name="refrigerator" tags="lightsoff" position="1865,2669">Empty. No fresh food down here.
+It&#39;s dark and cold.
+
+[[I guess it has to be.-&gt;kitchen]] </tw-passagedata>
+<tw-passagedata pid="147" name="recipe book" tags="" position="1898,2842">(set: $getfood to true)(set: $foodtype to &quot;nothing&quot;)
+Recipes for an apocolypse:
+Pork and Beans
+Tomato Soup
+Spaghetti Bolognaise
+Chilli
+Beef Stew
+Tuna Sandwich
+Fruit Salad
+{(click: &quot;Pork and Beans&quot;)[(set: $foodtype to &quot;Pork and Beans&quot;)(set: $cooked to true)(replace: ?c1)[You&#39;ve picked $foodtype.]]
+(click: &quot;Tomato Soup&quot;)[(set: $foodtype to &quot;Tomato Soup&quot;)(set: $cooked to true)(replace: ?c1)[You&#39;ve picked $foodtype.]]
+(click: &quot;Spaghetti Bolognaise&quot;)[(set: $foodtype to &quot;Spaghetti Bolognaise&quot;)(set: $cooked to true)(replace: ?c1)[You&#39;ve picked $foodtype.]]
+(click: &quot;Chilli&quot;)[(set: $foodtype to &quot;Chilli&quot;)(set: $cooked to true)(replace: ?c1)[You&#39;ve picked $foodtype.]]
+(click: &quot;Beef Stew&quot;)[(set: $foodtype to &quot;Beef Stew&quot;)(set: $cooked to true)(replace: ?c1)[You&#39;ve picked $foodtype.]]
+(click: &quot;Tuna Sandwich&quot;)[(set: $foodtype to &quot;Tuna Sandwich&quot;)(set: $cooked to false)(replace: ?c1)[You&#39;ve picked $foodtype.]]
+(click: &quot;Fruit Salad&quot;)[(set: $foodtype to &quot;Fruit Salad&quot;)(set: $cooked to false)(replace: ?c1)[You&#39;ve picked $foodtype.]]}
+[You&#39;ve picked $foodtype.]&lt;c1| You&#39;ll need to get the ingredients from the storeroom.
+
+[[Get cooking.-&gt;kitchen]]</tw-passagedata>
+<tw-passagedata pid="148" name="collectsupplies" tags="" position="3272,2585">You&#39;ve got the ingredients for $foodtype from that huge warehouse. (if: $cooked is true)[You need to cook this in the microwave.(set: $cook to true)](if: $cooked is false)[It&#39;s ready to eat, go to the canteen. (set: $food to true)]
+
+Head [[out.-&gt;sign]]
+(set: $getfood to false)</tw-passagedata>
+<tw-passagedata pid="149" name="cooked" tags="" position="2250,2807">(live: 3s)[Ping.]
+(live:4s)[The $foodtype steams, ready to eat.
+Head to the [[canteen]].]
+(set: $food to true)
+(set: $cook to false)
+(set: $cooked to false)</tw-passagedata>
+<tw-passagedata pid="150" name="file1" tags="" position="2606,3041">&lt;iframe src=&#39;https://archive.org/stream/SummaryofUSStrategicNuclearTargetingPolicy/Summary of U.S. Strategic Nuclear Targeting Policy?ui=embed#mode/2up&#39; &#39;fullscreen=0&#39; width=&#39;900&#39; height=&#39;700&#39; frameborder=&#39;0&#39; &gt;&lt;/iframe&gt;
+
+Put it [[back-&gt;admin]].</tw-passagedata>
+<tw-passagedata pid="151" name="file2" tags="" position="2828,3035">&lt;iframe src=&#39;https://archive.org/stream/EmergencyActionProcedureoftheJointChiefsofStaffNuclearActionProcedureVolume5/Emergency Action Procedure of the Joint Chiefs of Staff Nuclear Action Procedure Volume 5?ui=embed#mode/2up&#39; fullscreen=&#39;0&#39; width=&#39;900&#39; height=&#39;700&#39; frameborder=&#39;0&#39; &gt;&lt;/iframe&gt;
+
+Mostly [[redacted.-&gt;admin]]</tw-passagedata>
+<tw-passagedata pid="152" name="file3" tags="" position="2980,3034">&lt;iframe src=&#39;https://archive.org/stream/RequirementsforTacticalNuclearWeapons/Requirements for Tactical Nuclear Weapons?ui=embed#mode/2up&#39; fullscreen=&#39;0&#39; width=&#39;900&#39; height=&#39;700&#39; frameborder=&#39;0&#39; &gt;&lt;/iframe&gt;
+
+They were certainly [[prepared-&gt;admin]].</tw-passagedata>
+<tw-passagedata pid="153" name="file4" tags="" position="3133,3029">&lt;iframe src=&#39;https://archive.org/stream/AggregateNuclearDamageAssessmentTechniquesAppliedtoWesternEurope/Aggregate Nuclear Damage Assessment Techniques Applied to Western Europe?ui=embed#mode/2up&#39; fullscreen=&#39;0&#39; width=&#39;900&#39; height=&#39;700&#39; frameborder=&#39;0&#39; &gt;&lt;/iframe&gt;
+
+Europe could be gone by [[now...-&gt;admin]]</tw-passagedata>
 </tw-storydata>
 
 

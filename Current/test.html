@@ -324,11 +324,10 @@ Oblique [[shadows chase-&gt;fan]] eachother around the walls.
 
 A no entry sign.
 
-[[&#39;&#39;COMMAND AND CONTROL&#39;&#39;-&gt;controlroom]]
-//NO UNAUTHORISED ENTRY//
+To your right a door states: [[&#39;&#39;COMMAND AND CONTROL&#39;&#39;-&gt;controlroom]] //NO UNAUTHORISED ENTRY//.
 (if: $radio is false)[
-(if: $attack is true)[[[&#39;&#39;SECTORS 1 &amp; 2&#39;&#39;-&gt;coridoor]]
-[[Check the blast doors again.-&gt;Decontaminate]]]
+(if: $attack is true)[There is a large arrow on the floor pointing down the dark corridor, [[&#39;&#39;SECTORS 1 &amp; 2&#39;&#39;-&gt;coridoor]].
+Perhaps you should [[check the blast doors again.-&gt;Decontaminate]]]
 ]</tw-passagedata>
 <tw-passagedata pid="23" name="fan" tags="grey" position="3300,1517">(text-style: &quot;fade-in-out&quot;)[A huge recirculation fan.
 It is mesmerizing, galvanised steel spinning just fast enough to make you dizzy.]
@@ -458,10 +457,7 @@ Oblique shadows chase eachother around the walls.
 
 A no entry sign.
 
-[[&#39;&#39;COMMAND AND CONTROL&#39;&#39;-&gt;controlroom2]]
-&#39;&#39;NO UNAUTHORISED ENTRY&#39;&#39;
-
-&#39;&#39;SECTORS 1-3&#39;&#39;
+To your right a door states: [[&#39;&#39;COMMAND AND CONTROL&#39;&#39;-&gt;controlroom2]] //NO UNAUTHORISED ENTRY//.
 
 [[Get out.-&gt;Decontaminate2]]
 </tw-passagedata>
@@ -708,7 +704,7 @@ Nothing scraped into the tables. No wobbly chairs. No stress marks from years of
 (if: $food is true)[Your $foodtype is sitting on the table. [[Eat it.]]]
 
 [[It&#39;s lonely in here. Too silent for a canteen.-&gt;sector1]]</tw-passagedata>
-<tw-passagedata pid="79" name="kitchen" tags="" position="2141,2348">An industrial kitchen. Stainless steel, gas hobs. A wall of [[microwaves-&gt;microwaves]] on one side. A walk in [[refrigerator]] on the other. 
+<tw-passagedata pid="79" name="kitchen" tags="" position="2141,2348">An industrial kitchen. Stainless steel, gas hobs. A wall of [[microwaves-&gt;microwaves]] on one side. A walk in [[refrigerator]] on the other. The [[canteen]] is visible through the serving hatch.
 
 [[Get out.-&gt;sector1]]</tw-passagedata>
 <tw-passagedata pid="80" name="dormatory" tags="" position="2240,1944">Beds as far as the eye can see. A whole town sleeping in one room.

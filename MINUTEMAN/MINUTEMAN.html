@@ -157,7 +157,17 @@ html.woods8{
 
 
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">function gaTrack(path, title) {
+$.getScript('//www.google-analytics.com/analytics.js'); // jQuery shortcut
+  window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+  ga('create', 'UA-43154030-7', 'auto');
+
+  var track =  { page: path, title: title};
+  ga('set', track);
+  ga('send', 'pageview');
+};
+
 
 
 
